@@ -39,7 +39,7 @@
                             Transaksi
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Transaksi Masuk</a></li>
+                            <li><a class="dropdown-item" href="/transaksi/masuk">Transaksi Masuk</a></li>
                             <li><a class="dropdown-item" href="#">Transaksi Keluar</a></li>
                         </ul>
                     </li>
