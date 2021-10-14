@@ -30,7 +30,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/">Dompet</a></li>
-                            <li><a class="dropdown-item" href="#">Kategori</a></li>
+                            <li><a class="dropdown-item" href="/kategori">Kategori</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
