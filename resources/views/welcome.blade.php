@@ -2,6 +2,12 @@
 
 
 @section('main')
+    @php
+    $num = 0;
+    @endphp
+    @foreach ($dompet as $val)
+        <?php $num++; ?>
+    @endforeach
     <div>
         <div class="card">
             <div class="card-header">
@@ -10,12 +16,20 @@
                         <h2>Dompet</h2>
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <a href="/addDompet" class="btn btn-md btn-primary">Buat Baru</a>
+                        <a href="/addDompet" class="me-2 btn btn-md btn-primary">Buat Baru</a>
+                        <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            class="ms-2 btn dropdown-toggle btn-md btn-primary">All {{ $num }}</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="/dompet/1" class="dropdown-item"> Aktif</a>
+                            </li>
+                            <li><a href="/dompet/0" class="dropdown-item"> Tidak Aktif</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="card-body">
-                <table class="table">
+                <table class="table" id="table1">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -82,3 +96,11 @@
         </div>
     </div>
 @endsection
+
+@push('jstable')
+    <script>
+        $(document).ready(function() {
+            $('#table1').DataTable();
+        });
+    </script>
+@endpush

@@ -25,9 +25,8 @@ class DompetController extends Controller
     public function edit(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required',
-            'referensi' => 'required'
+            'nama' => 'required|max:5',
+            'deskripsi' => 'max:100',
         ]);
 
         $id = $request->id;
@@ -52,9 +51,8 @@ class DompetController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required',
-            'referensi' => 'required'
+            'nama' => 'required|min:5',
+            'deskripsi' => 'max:100',
         ]);
 
         $dompet = new Dompet();
